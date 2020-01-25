@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/snake.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="navigation">
+        <div class="logo">
+          <h1><a href="index.html">BrosGamesWorld</a></h1>
+        </div>
+        <div class="burger-menu" onclick="changeNavStatus()">
+          <div class="menu-line"></div>
+          <div class="menu-line"></div>
+          <div class="menu-line"></div>
+        </div>
+        <div class="nav-items">
+          <ul class="nav-ul">
+            <li><a href="./pages/games.html">Games</a></li>
+            <li><a href="./pages/news.html">News</a></li>
+            <li><a href="./pages/stats.html">Stats</a></li>
+            <li><a href="./pages/about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <canvas
+      class="canvas"
+      height="500"
+      width="500"
+      style="background-color: #646262"
+    >
+    </canvas>
+    <br />
+    <h1 style="margin-left:700px;">Scor: <span class="score">0</span></h1>
+    <h1></h1>
+    <script type="text/javascript" src="./js/snake.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+.canvas {
+  margin-top: 50px;
+  margin-left: 50%;
+  border-style: solid;
+  border-width: 10px;
+  transform: translateX(-50%);
+}
+
+#reload-btn {
+  font-family: roboto;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 40px;
+  border: 2px solid #222222;
+}
