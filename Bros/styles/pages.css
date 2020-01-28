@@ -1,0 +1,128 @@
+body {
+  overflow-x: hidden;
+}
+
+#active-li {
+  color: #ff330d;
+}
+
+.game-cards {
+  margin-top: 50px;
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.game-image img {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid #ff330d;
+  width: 70%;
+  border-radius: 20px;
+}
+
+.game-desc .desc {
+  margin: auto;
+  width: 65%;
+}
+
+.game-desc .desc a {
+  text-decoration: none;
+  color: #ff330d;
+}
+
+.game-desc .desc p {
+  font-family: roboto;
+}
+
+.coming-soon {
+  text-align: center;
+  font-family: roboto;
+  margin: 80px 0;
+}
+
+.news-section {
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+.news-section h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.news-card {
+  margin-top: 50px;
+}
+
+.news-card:nth-child(even) {
+  border: 3px solid #111111;
+  background: #ffffff;
+}
+
+.news-card:nth-child(even) p {
+  color: #111111;
+}
+
+.news-card:nth-child(even) a {
+  color: #111111;
+}
+
+.stats-section {
+  margin-top: 50px;
+  margin-bottom: 10%;
+}
+
+.stats-section h1 {
+  text-align: center;
+  font-size: 36px;
+  margin: 20px 0 40px 0;
+}
+
+.scores {
+  margin-bottom: 80px;
+  display: grid;
+  gap: 40px 0;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.scores > * {
+  justify-self: center;
+}
+
+.scores > * > h2 {
+  margin-bottom: 20px;
+}
+
+.scores > * > div {
+  margin-left: 50px;
+  display: flex;
+}
+
+.scores div span {
+  color: #514ecc;
+}
+
+.about-section {
+  margin-top: 80px;
+}
+
+footer#footer-inactive {
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .game-cards {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .scores {
+    grid-template-columns: 1fr;
+  }
+
+  .scores > * {
+    margin-top: 40px;
+  }
+}
