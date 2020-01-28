@@ -75,7 +75,6 @@ body {
 }
 
 .stats-section h1 {
-  text-align: center;
   font-size: 36px;
   margin: 20px 0 40px 0;
 }
@@ -88,7 +87,7 @@ body {
 }
 
 .scores > * {
-  justify-self: center;
+  margin-left: 10%;
 }
 
 .scores > * > h2 {

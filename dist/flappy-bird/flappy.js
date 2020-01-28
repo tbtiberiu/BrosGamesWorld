@@ -27,6 +27,7 @@ let bY = 150;
 let gravity = 1.25;
 let jump = 30;
 let score = 0;
+let highscore = localStorage.getItem("flappy-bird-highscore");
 
 function moveUp() {
   bY -= jump;
@@ -64,6 +65,11 @@ function draw() {
           bY + bird.height >= pipe[i].y + constant)) ||
       bY + bird.height >= canvas.height
     ) {
+      if (score > highscore) {
+        highscore = score;
+        localStorage.setItem("flappy-bird-highscore", highscore);
+      }
+
       location.reload();
     }
 

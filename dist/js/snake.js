@@ -124,6 +124,8 @@ const ctx = canvas.getContext("2d");
 const scale = 20;
 const rows = canvas.height / scale;
 const columns = canvas.width / scale;
+let highscore = localStorage.getItem("snake-highscore");
+let score;
 var snake;
 
 (function setup() {
@@ -142,7 +144,13 @@ var snake;
     }
 
     snake.checkCollision();
-    document.querySelector(".score").innerText = snake.total - 2;
+    score = snake.total - 2;
+    document.querySelector(".score").innerText = score;
+
+    if (score > highscore) {
+      highscore = score;
+      localStorage.setItem("snake-highscore", score);
+    }
   }, 250);
 })();
 

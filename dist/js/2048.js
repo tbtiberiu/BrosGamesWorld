@@ -3,6 +3,7 @@ const ctx = canvas.getContext("2d");
 const scoreLabel = document.querySelector("#score");
 
 let score = 0;
+let highscore = localStorage.getItem("2048-highscore");
 let size = 4;
 let width = canvas.width / size - 6;
 
@@ -20,6 +21,7 @@ function startGame() {
 }
 
 function finishGame() {
+  loss = true;
   for (let i = 0; i < size; i++) {
     cells[0][i].value = "";
     cells[3][i].value = "";
@@ -33,8 +35,10 @@ function finishGame() {
   cells[2][2].value = "E";
   cells[2][3].value = "R";
   drawAllCells();
-
-  loss = true;
+  if (score > highscore) {
+    highscore = score;
+    localStorage.setItem("2048-highscore", score);
+  }
 }
 
 function cell(row, col) {

@@ -193,9 +193,9 @@ nav {
 }
 
 .score p {
-  font-size: 18px;
+  font-size: 20px;
   margin-left: 20%;
-  font-family: arhivoBlack;
+  font-family: robotoBlack;
 }
 
 .score p span {
