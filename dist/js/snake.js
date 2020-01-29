@@ -26,39 +26,19 @@ function Snake() {
     this.y += this.ySpeed;
 
     if (this.x > canvas.width) {
-      this.x = 0;
-      this.y = 0;
-
-      this.xSpeed = scale * 1;
-      this.ySpeed = 0;
-      window.location.replace("./pages/games.html");
+      gameOver();
     }
 
     if (this.y > canvas.height) {
-      this.y = 0;
-      this.x = 0;
-
-      this.xSpeed = scale * 1;
-      this.ySpeed = 0;
-      window.location.replace("./pages/games.html");
+      gameOver();
     }
 
     if (this.x < 0) {
-      this.x = 0;
-      this.y = 0;
-
-      this.xSpeed = scale * 1;
-      this.ySpeed = 0;
-      window.location.replace("./pages/games.html");
+      gameOver();
     }
 
     if (this.y < 0) {
-      this.y = 0;
-      this.x = 0;
-
-      this.xSpeed = scale * 1;
-      this.ySpeed = 0;
-      window.location.replace("./pages/games.html");
+      gameOver();
     }
   };
 
@@ -95,12 +75,7 @@ function Snake() {
   this.checkCollision = function() {
     for (var i = 0; i < this.tail.length; i++) {
       if (this.x === this.tail[i].x && this.y === this.tail[i].y) {
-        this.y = 0;
-        this.x = 0;
-
-        this.xSpeed = scale * 1;
-        this.ySpeed = 0;
-        window.location.replace("./pages/games.html");
+        gameOver();
       }
     }
   };
@@ -125,6 +100,19 @@ const scale = 20;
 const rows = canvas.height / scale;
 const columns = canvas.width / scale;
 let highscore = localStorage.getItem("snake-highscore");
+let scoreOverTen, allTimeApplesEaten;
+if (localStorage.hasOwnProperty("snake-score-over-ten")) {
+  scoreOverTen = localStorage.getItem("snake-score-over-ten");
+} else {
+  scoreOverTen = 0;
+}
+if (localStorage.hasOwnProperty("snake-all-time-apples-eaten")) {
+  allTimeApplesEaten = JSON.parse(
+    localStorage.getItem("snake-all-time-apples-eaten")
+  );
+} else {
+  allTimeApplesEaten = 0;
+}
 let score;
 var snake;
 
@@ -153,6 +141,16 @@ var snake;
     }
   }, 250);
 })();
+
+function gameOver() {
+  allTimeApplesEaten += score;
+  localStorage.setItem("snake-all-time-apples-eaten", allTimeApplesEaten);
+  if (score > 10) {
+    scoreOverTen++;
+    localStorage.setItem("snake-score-over-ten", scoreOverTen);
+  }
+  window.location.replace("./pages/games.html");
+}
 
 window.addEventListener("keydown", evt => {
   const direction = evt.key.replace("Arrow", "");

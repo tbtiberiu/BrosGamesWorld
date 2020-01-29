@@ -13,6 +13,24 @@ const winCombos = [
 ];
 
 const cells = document.querySelectorAll(".cell");
+
+let wins, ties, losses;
+if (localStorage.hasOwnProperty("tic-tac-toe-wins")) {
+  wins = localStorage.getItem("tic-tac-toe-wins");
+} else {
+  wins = 0;
+}
+if (localStorage.hasOwnProperty("tic-tac-toe-ties")) {
+  ties = localStorage.getItem("tic-tac-toe-ties");
+} else {
+  ties = 0;
+}
+if (localStorage.hasOwnProperty("tic-tac-toe-losses")) {
+  losses = localStorage.getItem("tic-tac-toe-losses");
+} else {
+  losses = 0;
+}
+
 startGame();
 
 function startGame() {
@@ -61,6 +79,13 @@ function gameOver(gameWon) {
     cells[i].removeEventListener("click", turnClick, false);
   }
   declareWinner(gameWon.player == huPlayer ? "You win!" : "You lose.");
+  if (gameWon.player == huPlayer) {
+    wins++;
+    localStorage.setItem("tic-tac-toe-wins", wins);
+  } else if (gameWon.player == aiPlayer) {
+    losses++;
+    localStorage.setItem("tic-tac-toe-losses", losses);
+  }
 }
 
 function declareWinner(who) {
@@ -82,6 +107,8 @@ function checkTie() {
       cells[i].style.backgroundColor = "green";
       cells[i].removeEventListener("click", turnClick, false);
     }
+    ties++;
+    localStorage.setItem("tic-tac-toe-ties", ties);
     declareWinner("Tie Game!");
     return true;
   }
