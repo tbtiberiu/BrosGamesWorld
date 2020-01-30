@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BrosGamesWorld</title>
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/pages.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="navigation">
+        <div class="logo">
+          <h1><a href="../index.html">BrosGamesWorld</a></h1>
+        </div>
+        <div class="burger-menu" onclick="changeNavStatus()">
+          <div class="menu-line"></div>
+          <div class="menu-line"></div>
+          <div class="menu-line"></div>
+        </div>
+        <div class="nav-items">
+          <ul class="nav-ul">
+            <li><a href="games.html">Games</a></li>
+            <li id="active-li">News</li>
+            <li><a href="stats.html">Stats</a></li>
+            <li><a href="about.html">About</a></li>
+            <!-- <li><img src="./images/icons/search-solid.svg" alt="Search" /></li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section class="news-section">
+        <h1>News</h1>
+        <div class="news-cards">
+          <div class="news-card">
+            <div class="news-desc">
+              <h2>18 January:</h2>
+              <p>
+                In that day we decided to create that website.
+              </p>
+              
+            </div>
+          </div>
+          <div class="news-card">
+            <div class="news-desc">
+              <h2>First Week 18-25 January:</h2>
+              <p>
+                We created a Snake game and an extraordinary 2048 Game, we hope you will enjoy our work and don’t forget to send us your opinion on email. (Adress is in page About)
+              </p>
+              
+            </div>
+          </div>
+          <div class="news-card">
+            <div class="news-desc">
+              <h2>Second Week 26-30 January:</h2>
+              <p>
+                We made some upgrades on our first games and created 3 new titles (Flappy Bird, TicTacToe and a Retro game named Tetris). For many of us that games are our childhood games and that is an important argue for adding this games.
+              </p>
+              
+            </div>
+          </div>
+          <div class="news-card">
+            <div class="news-desc">
+              <h2>27 January:</h2>
+              <p>
+                We managed to put the website online so you can enjoy anywere from these games, the only thing you need is a stable internet connection.
+              </p>
+              
+            </div>
+          </div>
+          
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-navigation">
+        <div class="footer-nav-items">
+          <ul>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="stats.html">Stats</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="logo">
+          <h1><a href="../index.html">BrosGamesWorld</a></h1>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/news.js"></script>
+  </body>
+</html>

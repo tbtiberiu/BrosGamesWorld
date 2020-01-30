@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BrosGamesWorld</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="navigation">
+        <div class="logo">
+          <h1><a href="index.html">BrosGamesWorld</a></h1>
+        </div>
+        <div class="burger-menu" onclick="changeNavStatus()">
+          <div class="menu-line"></div>
+          <div class="menu-line"></div>
+          <div class="menu-line"></div>
+        </div>
+        <div class="nav-items">
+          <ul class="nav-ul">
+            <li><a href="./pages/games.html">Games</a></li>
+            <li><a href="./pages/news.html">News</a></li>
+            <li><a href="./pages/stats.html">Stats</a></li>
+            <li><a href="./pages/about.html">About</a></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section id="latest-game">
+        <h1>Try out our latest game</h1>
+        <div class="game-image">
+          <img
+            src="./images/covers/tictactoe-cover.jpeg"
+            alt="Game Cover Image"
+          />
+        </div>
+        <div class="game-desc">
+          <div class="desc">
+            <h2>Tic Tac Toe</h2>
+            <p>
+              Play Tic Tac Toe, not against a person, but an AI bot witch can
+              not lose. Try your best.
+            </p>
+          </div>
+          <div class="play-button">
+            <a href="snake.html">Play</a>
+          </div>
+        </div>
+      </section>
+      <section class="news-section">
+        <h1>News</h1>
+        <div class="news-card">
+          <div class="news-desc">
+            <h2>27 January:</h2>
+            <p>
+              We managed to put the website online so you can enjoy anywere from these games, the only thing you need is a stable internet connection.
+            </p>
+            <a href="./pages/news.html">Read more...</a>
+          </div>
+        </div>
+      </section>
+      <section class="stats-section">
+        <h1>Your Stats</h1>
+        <div class="high-scores">
+          <div class="score snake-highscore">
+            <p>Highest score in Snake: <span id="snake-hs">0</span></p>
+          </div>
+          <div class="score 2048-highscore">
+            <p>
+              Highest score in 2048:
+              <span id="game-2048-hs">0</span>
+            </p>
+          </div>
+          <div class="score flappy-bird-hs">
+            <p>
+              Highest score in Flappy Bird:
+              <span id="flappy-bird-hs">0</span>
+            </p>
+          </div>
+          <div class="score tic-tac-toe-hs">
+            <p>
+              Wins in Tic Tac Toe:
+              <span id="tic-tac-toe-wins">0</span>
+            </p>
+          </div>
+        </div>
+        <a href="./pages/stats.html">
+          <p>See full stats</p>
+          <img src="./images/icons/arrow-right-solid.svg" />
+        </a>
+      </section>
+      
+    </main>
+    <footer>
+      <div class="footer-navigation">
+        <div class="footer-nav-items">
+          <ul>
+            <li><a href="./pages/games.html">Games</a></li>
+            <li><a href="./pages/news.html">News</a></li>
+            <li><a href="./pages/stats.html">Stats</a></li>
+            <li><a href="./pages/about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="logo">
+          <h1><a href="index.html">BrosGamesWorld</a></h1>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/stats.js"></script>
+  </body>
+</html>
