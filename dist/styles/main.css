@@ -203,6 +203,10 @@ nav {
   color: #514ecc;
 }
 
+.stats-section {
+  margin-bottom: 60px;
+}
+
 .stats-section a {
   margin: auto;
   margin-top: 50px;
